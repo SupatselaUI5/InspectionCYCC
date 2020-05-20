@@ -1,0 +1,211 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "gdsd.ApplicationForFunding1",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"ZDSD_CRM_UI5_APP_SRV": {
+				"uri": "/sap/opu/odata/sap/ZDSD_CRM_UI5_APP_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "gdsd.ApplicationForFunding1.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.f": {
+					"minVersion": ""
+				},
+				"sap.fiori": {
+					"minVersion": ""
+				},
+				"sap.m": {},
+				"sap.tnt": {
+					"minVersion": ""
+				},
+				"sap.ui.commons": {
+					"minVersion": ""
+				},
+				"sap.ui.comp": {
+					"minVersion": ""
+				},
+				"sap.ui.core": {
+					"minVersion": ""
+				},
+				"sap.ui.table": {
+					"minVersion": ""
+				},
+				"sap.ui.unified": {
+					"minVersion": ""
+				},
+				"sap.ui.ux3": {
+					"minVersion": ""
+				},
+				"sap.uxap": {
+					"minVersion": ""
+				}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "gdsd.ApplicationForFunding1.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "TwoWay",
+					"useBatch": true,
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ZDSD_CRM_UI5_APP_SRV",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "gdsd.ApplicationForFunding1.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [
+				{
+					"name": "ProvincialBusinessPlanA",
+					"pattern": "",
+					"titleTarget": "",
+					"greedy": false,
+					"target": [
+						"ProvincialBusinessPlanA"
+					]
+				},
+				{
+					"name": "ProvincialBusinessPlanSectionA",
+					"pattern": "ProvincialBusinessPlanSectionA",
+					"target": [
+						"ProvincialBusinessPlanA"
+					]
+				},
+				{
+					"name": "ProvincialBusinessPlanSectionB",
+					"pattern": "ProvincialBusinessPlanSectionB",
+					"target": [
+						"ProvincialBusinessPlanB"
+					]
+				},
+				{
+					"name": "ProvincialBusinessPlanSectionD",
+					"pattern": "ProvincialBusinessPlanSectionD",
+					"target": [
+						"ProvincialBusinessPlanD"
+					]
+				},
+				{
+					"name": "ProvincialBusinessPlanSectionF",
+					"pattern": "ProvincialBusinessPlanSectionF",
+					"target": [
+						"ProvincialBusinessPlanF"
+					]
+				}
+			],
+			"targets": {
+				"ProvincialBusinessPlanA": {
+					"viewType": "XML",
+					"viewName": "ProvincialBusinessPlanSectionA",
+					"viewId": "planA"
+				},
+				"DialogOrganisation": {
+					"viewType": "XML",
+					"viewName": "DialogOrganisation"
+				},
+				"ProgramFragment": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "ProvincialBusinessPlanSectionA"
+				},
+				"DialogAddProgram": {
+					"viewType": "XML",
+					"viewName": "DialogAddProgram"
+				},
+				"ProvincialBusinessPlanB": {
+					"viewType": "XML",
+					"viewName": "ProvincialBusinessPlanSectionB",
+					"viewId": "planB"
+				},
+				"ProvincialBusinessPlanD": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "ProvincialBusinessPlanSectionD",
+					"viewId": "planD"
+				},
+				"ProvincialBusinessPlanF": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewName": "ProvincialBusinessPlanSectionF",
+					"viewId": "planF"
+				}
+			}
+		}
+	},
+	"sap.platform.abap": {
+		"uri": "/sap/bc/ui5_ui5/sap/zdsd_crm_fund/webapp",
+		"_version": "1.1.0"
+	}
+}
