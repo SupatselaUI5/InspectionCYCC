@@ -1,4 +1,4 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="gdsd.ApplicationForFunding1.controller.ProvincialBusinessPlanSectionB">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="gdsd.InspectionCYCC.controller.ProvincialBusinessPlanSectionB">
 
 			<Page id="provincialB" title="Provincial Business Plan">
 				<content>

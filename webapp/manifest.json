@@ -1,7 +1,7 @@
 {
 	"_version": "1.12.0",
 	"sap.app": {
-		"id": "gdsd.ApplicationForFunding1",
+		"id": "gdsd.InspectionCYCC",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -42,7 +42,7 @@
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
-			"viewName": "gdsd.ApplicationForFunding1.view.App",
+			"viewName": "gdsd.InspectionCYCC.view.App",
 			"type": "XML",
 			"async": true,
 			"id": "App"
@@ -91,7 +91,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "gdsd.ApplicationForFunding1.i18n.i18n"
+					"bundleName": "gdsd.InspectionCYCC.i18n.i18n"
 				}
 			},
 			"": {
@@ -118,7 +118,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"async": true,
-				"viewPath": "gdsd.ApplicationForFunding1.view",
+				"viewPath": "gdsd.InspectionCYCC.view",
 				"controlAggregation": "pages",
 				"controlId": "app",
 				"clearControlAggregation": false

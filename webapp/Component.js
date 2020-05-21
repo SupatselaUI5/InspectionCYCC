@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"gdsd/ApplicationForFunding1/model/models"
+	"gdsd/InspectionCYCC/model/models"
 ], function (UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("gdsd.ApplicationForFunding1.Component", {
+	return UIComponent.extend("gdsd.InspectionCYCC.Component", {
 
 		metadata: {
 			manifest: "json"

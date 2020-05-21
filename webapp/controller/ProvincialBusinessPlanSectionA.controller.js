@@ -2,7 +2,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 	'sap/ui/core/Fragment'
 ], function (Controller, Fragment) {
 	"use strict";
-	return Controller.extend("gdsd.ApplicationForFunding1.controller.ProvincialBusinessPlanSectionA", {
+	return Controller.extend("gdsd.InspectionCYCC.controller.ProvincialBusinessPlanSectionA", {
 		/**
 		 * Called when a controller is instantiated and its View controls (if available) are already created.
 		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
@@ -63,15 +63,15 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 							// use OData parameters here if needed
 					});
 					
-						this.byId("list0").bindElement({
-						path: "/GetBPProgramSet('151')"
+			//			this.byId("list0").bindElement({
+				//		path: "/GetBPProgramSet('151')"
 							// use OData parameters here if needed
-					});
+				//	});
 					
-						this.byId("list1").bindElement({
-						path: "/GetBPProgramSet"
+				//		this.byId("list1").bindElement({
+				//		path: "/GetBPProgramSet"
 							// use OData parameters here if needed
-					});
+				//	});
 					
 					sap.ui.core.BusyIndicator.hide();
 					//console.log("Success " + oData);

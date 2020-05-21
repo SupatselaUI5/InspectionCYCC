@@ -1,6 +1,6 @@
 specVersion: '1.0'
 metadata:
-  name: ApplicationForFunding1
+  name: InspectionCYCC
 type: application
 resources:
   configuration:
