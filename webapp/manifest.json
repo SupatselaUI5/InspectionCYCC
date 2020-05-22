@@ -205,7 +205,7 @@
 		}
 	},
 	"sap.platform.abap": {
-		"uri": "/sap/bc/ui5_ui5/sap/zdsd_crm_fund/webapp",
+		"uri": "/sap/bc/ui5_ui5/sap/zdsd_insp_cycc/webapp",
 		"_version": "1.1.0"
 	}
 }

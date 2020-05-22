@@ -1,1 +1,1 @@
-{"type":"sap.web","builders":{"configs":{}},"runners":{"configs":{}},"attributes":{},"mixinTypes":[]}
+{"type":"sap.web","builders":{"configs":{}},"runners":{"configs":{}},"attributes":{"sap.watt.common.setting":["{\"deploy\":{\"destination\":\"GatewayHTTP\",\"name\":\"ZDSD_INSP_CYCC\"}}"]},"mixinTypes":[]}
