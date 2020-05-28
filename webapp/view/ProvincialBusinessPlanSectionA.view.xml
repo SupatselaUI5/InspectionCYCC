@@ -232,7 +232,7 @@
 					
 					        </IconTabFilter>
 					
-					        <IconTabFilter text="Management" icon="sap-icon://manager" iconColor="Positive" id="streetaddress" key="streetaddressKey">
+					        <IconTabFilter text="Management" icon="sap-icon://manager" iconColor="Contrast" id="streetaddress" key="streetaddressKey">
 					
 					            <content>
 					
@@ -726,7 +726,7 @@
 					
 					        </IconTabFilter>
 					
-					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Administration" icon="sap-icon://form" iconColor="Positive" id="filter2_copy5" key="nameKey">
+					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Administration" icon="sap-icon://form" iconColor="Critical" id="filter2_copy5" key="nameKey">
 					
 					            <content>
 					
@@ -1286,7 +1286,7 @@
 					
 					        </IconTabFilter>
 					
-					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Finances" icon="sap-icon://customer-financial-fact-sheet" iconColor="Positive" id="filter2_copy6" key="historyKey">
+					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Finances" icon="sap-icon://customer-financial-fact-sheet" id="filter2_copy6" key="historyKey">
 					
 					            <content>
 					
@@ -1524,7 +1524,7 @@
 					
 					        </IconTabFilter>
 					
-					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Children" icon="sap-icon://family-care" iconColor="Positive" id="filter2_copy7" key="targetKey">
+					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Children" icon="sap-icon://family-care" iconColor="Negative" id="filter2_copy7" key="targetKey">
 					
 					            <content>
 					
@@ -2124,7 +2124,7 @@
 					
 					        </IconTabFilter>
 					
-					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Problems" icon="sap-icon://message-warning" iconColor="Positive" id="filter2_copy9" key="purposeKey">
+					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Problems" icon="sap-icon://message-warning" iconColor="Negative" id="filter2_copy9" key="purposeKey">
 					
 					            <content>
 					
@@ -2434,7 +2434,7 @@
 					
 					            </IconTabFilter>
 					
-					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Outside Contact" icon="sap-icon://world" iconColor="Positive" id="filter2_copy11" key="typeKey">
+					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Outside Contact" icon="sap-icon://world" iconColor="Critical" id="filter2_copy11" key="typeKey">
 					
 					            <content>
 					
@@ -2588,7 +2588,7 @@
 					
 					        </IconTabFilter>
 					
-					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Officer Impression " icon="sap-icon://inspection" iconColor="Positive" id="filter2_copy12" key="poorKey">
+					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Officer Impression " icon="sap-icon://inspection" id="filter2_copy12" key="poorKey">
 					
 					            <content>
 					
@@ -2656,7 +2656,7 @@
 					
 					        </IconTabFilter>
 					
-					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Reunification" icon="sap-icon://family-protection" iconColor="Positive" id="filter2_copy14" key="provinceKey">
+					        <IconTabFilter xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" text="Reunification" icon="sap-icon://family-protection" iconColor="Neutral" id="filter2_copy14" key="provinceKey">
 					
 					            <content>
 					
