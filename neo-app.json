@@ -41,10 +41,10 @@
       "path": "/sap/opu/odata",
       "target": {
         "type": "destination",
-        "name": "GatewayHTTP",
+        "name": "Gateway",
         "entryPath": "/sap/opu/odata"
       },
-      "description": "GatewayHTTP"
+      "description": "Gateway Connection"
     }
   ],
   "sendWelcomeFileRedirect": true

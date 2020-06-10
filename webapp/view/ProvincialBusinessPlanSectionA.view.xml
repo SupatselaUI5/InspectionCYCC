@@ -2,7 +2,7 @@
 	
 			<Page id="planA" title="Inspection report for the registration/renewal of registration of a child and youth care centre ">
 				<content>
-					<ObjectHeader xmlns="sap.m" title="Inspection Report for CYCC   - Organisation" id="header0" icon="pictures/icon.jpg">
+					<ObjectHeader xmlns="sap.m" title="Inspection Report for CYCC   - {But000/NameOrg1}" id="header0" icon="pictures/icon.jpg">
 					    <statuses>
 					  </statuses>
 					    <attributes>
@@ -94,7 +94,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="input0_copy15" value="John" textAlign="Begin" fieldWidth="100%" editable="false"/>
+					                                        <Input width="100%" id="input0_copy15" value="{But000/FirstName}" textAlign="Begin" fieldWidth="100%" editable="false"/>
 					
 					                                        
 					

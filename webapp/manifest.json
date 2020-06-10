@@ -11,14 +11,14 @@
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
 			"id": "servicecatalog.connectivityComponentForManifest",
-			"version": "1.40.12"
+			"version": "0.0.0"
 		},
 		"dataSources": {
 			"ZDSD_CRM_UI5_APP_SRV": {
 				"uri": "/sap/opu/odata/sap/ZDSD_CRM_UI5_APP_SRV/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/metadata.xml"
+					"localUri": "localService/ZDSD_CRM_UI5_APP_SRV/metadata.xml"
 				}
 			}
 		}
@@ -98,8 +98,7 @@
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",
-					"defaultBindingMode": "TwoWay",
-					"useBatch": true,
+					"defaultBindingMode": "OneWay",
 					"defaultCountMode": "Request"
 				},
 				"dataSource": "ZDSD_CRM_UI5_APP_SRV",
