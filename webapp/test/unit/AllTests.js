@@ -1,5 +1,5 @@
 sap.ui.define([
-	"gdsd/ApplicationForFunding1/test/unit/controller/View1.controller"
+	"gdsd/Inspect/test/unit/controller/TaskList.controller"
 ], function () {
 	"use strict";
 });

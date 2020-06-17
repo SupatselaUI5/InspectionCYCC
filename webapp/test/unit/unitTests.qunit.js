@@ -5,7 +5,7 @@ sap.ui.getCore().attachInit(function () {
 	"use strict";
 
 	sap.ui.require([
-		"gdsd/ApplicationForFunding1/test/unit/AllTests"
+		"gdsd/Inspect/test/unit/AllTests"
 	], function () {
 		QUnit.start();
 	});

@@ -1,0 +1,39 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="gdsd.Inspect.controller.TaskList" displayBlock="true">
+
+	
+			<Page backgroundDesign="Solid" id="TaskList">
+				<content>
+					<ObjectHeader xmlns="sap.m" intro="Social Worker: {But000/NameFirst} {But000/NameLast}" icon="pictures/gauteng.png" id="objHeaderSW" title="Inspection"/>
+					<List id="taskList">
+						<items>
+							<ObjectListItem  type="Navigation" title="{BpNo}" number="OrgName" press="action"  id="ItemCYCC" detailPress="action">
+								<attributes>
+									<ObjectAttribute text="Description"/>
+								</attributes>
+								<firstStatus>
+									<ObjectStatus text="CYCC Inspection"/>
+								</firstStatus>
+							</ObjectListItem>
+							<ObjectListItem xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Navigation" title="BP Number" number="OrgName" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'SFABInspection'\}\},'detailPress':\{'navigation':\{'routeName':'SFABInspection'\}\}\}" id="itemShelterAbused" detailPress="action">
+								<attributes>
+									<ObjectAttribute text="Description"/>
+								</attributes>
+								<firstStatus>
+									<ObjectStatus text="Shelter for Abused women"/>
+								</firstStatus>
+							</ObjectListItem>
+						</items>
+						<headerToolbar>
+							<Toolbar width="100%" id="toolbar2">
+								<content>
+									<SearchField xmlns="sap.m" placeholder="Search with BP No, Task Type or Name" id="field0" liveChange="onSearch"/>
+									<ToolbarSpacer id="spacer1"/>
+									<Button xmlns="sap.m" icon="sap-icon://filter" press="handleFilterButtonPressed" type="Emphasized"/>
+								</content>
+							</Toolbar>
+						</headerToolbar>
+					</List>
+				</content>
+			</Page>
+	
+</mvc:View>

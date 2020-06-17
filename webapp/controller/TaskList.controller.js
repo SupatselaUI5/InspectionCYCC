@@ -1,17 +1,9 @@
 sap.ui.define(["sap/ui/core/mvc/Controller"], function (Controller) {
 	"use strict";
-	return Controller.extend("gdsd.Inspect.controller.App", {
+	return Controller.extend("gdsd.Inspect.controller.TaskList", {
+		onInit: function () {},
 		/**
-		 * Called when a controller is instantiated and its View controls (if available) are already created.
-		 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
-		 * @memberOf gdsd.Inspect.view.App
-		 */
-		onInit: function () {
-			var oApplication = {};
-			oApplication.app = this.getView().byId("TaskList");
-		},
-		/**
-		 *@memberOf gdsd.Inspect.controller.App
+		 *@memberOf gdsd.Inspect.controller.TaskList
 		 */
 		action: function (oEvent) {
 			var that = this;

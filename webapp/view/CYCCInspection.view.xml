@@ -1,6 +1,7 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="gdsd.InspectionCYCC.controller.ProvincialBusinessPlanSectionA">
-	
-			<Page id="planA" title="Inspection report for the registration/renewal of registration of a child and youth care centre ">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="gdsd.Inspect.controller.CYCCInspection">
+
+		
+		<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="planA" title="Inspection report for the registration/renewal of registration of a child and youth care centre " showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'TaskList'\}\}\}">
 				<content>
 					<ObjectHeader xmlns="sap.m" title="Inspection Report for CYCC   - {But000/NameOrg1}" id="header0" icon="pictures/icon.jpg">
 					    <statuses>
@@ -50,9 +51,9 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="idPoBox_copy" editable="false" value="{Adrc/PoBox}"/>
+					                                        <Input width="100%" id="idPoBox_copy" editable="false" value="{Adrc/HouseNum1}, {Adrc/Street}"/>
 					
-					                                        <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" width="100%" id="input0_copy17" editable="false" value="{Adrc/Street}"/>
+					                                        <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" width="100%" id="input0_copy17" editable="false" value=" {Adrc/City1}, {Adrc/Region}"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -64,7 +65,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" width="100%" id="input0_copy19" editable="false" value="{Adrc/Street}"/>
+					                                        <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" width="100%" id="input0_copy19" editable="false" value="{Adrc/PostCode1}"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -94,7 +95,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="input0_copy15" value="{But000/FirstName}" textAlign="Begin" fieldWidth="100%" editable="false"/>
+					                                        <Input width="100%" id="input0_copy15" value="{But000/NameFirst} {But000/NameLast}" textAlign="Begin" fieldWidth="100%" editable="false"/>
 					
 					                                        
 					
@@ -108,7 +109,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="input0_copy20" editable="false" value="123 Long Street"/>
+					                                        <Input width="100%" id="input0_copy20" editable="false" value="{Adrc/HouseNum1}, {Adrc/Street}, {Adrc/City1}, {Adrc/Region}, {Adrc/PostCode1}"/>
 					
 					                                        
 					
@@ -122,7 +123,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="input0_copy18" editable="false" value="{Adrc/TelNumber}"/>
+					                                        <Input width="100%" id="input0_copy18" editable="false" value="{Adr2/TelNumber}"/>
 					
 					                                        
 					
@@ -136,7 +137,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="input0_copy16" editable="false" value="{Adr2/TelnrLong}"/>
+					                                        <Input width="100%" id="input0_copy16" editable="false" value="{Adr2/TelnrCall}"/>
 					
 					                                        
 					
@@ -164,7 +165,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="input0_copy22" editable="false" value="socialworker@dsd.co.za" type="Email"/>
+					                                        <Input width="100%" id="input0_copy22" editable="false" value="{Adr6/SmtpAddr}" type="Email"/>
 					
 					                                        
 					
@@ -216,7 +217,7 @@
 					
 					                            <items>
 					
-					                                <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Previous" id="button0_copy2" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'MainPage'\}\}\}" icon="sap-icon://nav-back"/>
+					                                <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Previous" id="btnPrevious" icon="sap-icon://nav-back" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'TaskList'\}\}\}"/>
 					
 					                                <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Next" id="button1_copy2" press="onToStreetAddress" icon="sap-icon://navigation-right-arrow" iconFirst="false"/>
 					
@@ -277,386 +278,6 @@
 					                                        <TextArea xmlns="sap.m" value="Test Text" rows="4" id="area0" editable="false"/>
 					
 					                                        </sap.ui.layout.form:fields>
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
-					                                <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Constitution of board of management" id="element0_copy31">
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
-					                                <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Management shall consists of not less than seven members" id="element0_copy25">
-					
-					                                    <sap.ui.layout.form:fields>
-					
-					                                        <Table noDataText="Drop column list items here and columns in the area above" id="table0">
-					
-					                                            <items>
-					
-					                                                <ColumnListItem type="Active" id="item0_1590083015083">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy2"/></cells>
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy3"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy4"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy5"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy2">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy2"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy2"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy6"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy7"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy8"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy3">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy3"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy3"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy9"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy10"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy11"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy4">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy4"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy4"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy12"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy13"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy14"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy5">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy5"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy5"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy15"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy16"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy17"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy6">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy6"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy6"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy18"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy19"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy20"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                            </items>
-					
-					                                            <columns>
-					
-					                                                <Column id="column0">
-					
-					                                                    <header>
-					
-					                                                        <Label text="Name" id="label1"/>
-					
-					                                                    </header>
-					
-					                                                </Column>
-					
-					                                                <Column id="column1">
-					
-					                                                    <header>
-					
-					                                                        <Label text="Address" id="label2"/>
-					
-					                                                    </header>
-					
-					                                                </Column>
-					
-					                                                <Column id="column2">
-					
-					                                                    <header>
-					
-					                                                        <Label text="Occupation" id="label3"/>
-					
-					                                                    </header>
-					
-					                                                </Column>
-					
-					                                                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="column2_copy2">
-					
-					                                                    <header>
-					
-					                                                        <Label text="Position" id="label3_copy8"/>
-					
-					                                                        
-					
-					                                                    </header>
-					
-					                                                    
-					
-					                                                </Column>
-					
-					                                                <Column xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" id="column2_copy3">
-					
-					                                                    <header>
-					
-					                                                        <Label text="Tel" id="label3_copy9"/>
-					
-					                                                        
-					
-					                                                    </header>
-					
-					                                                    
-					
-					                                                </Column></columns>
-					
-					                                            <swipeContent>
-					
-					                                                <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Occupation" id="label3_copy7"/>
-					
-					                                            </swipeContent></Table>
-					
-					                                        
-					
-					                                    </sap.ui.layout.form:fields>
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
-					                                <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Does the Child and youth care has sub-committees? If Yes, State the nature and numbers of members" id="element0_copy24">
-					
-					                                    <sap.ui.layout.form:fields>
-					
-					                                        <RadioButtonGroup xmlns="sap.m" columns="1" id="group0_1590083436760">
-					
-					                                            <buttons>
-					
-					                                                <RadioButton text="Yes" id="button0_1590083436756"/>
-					
-					                                                <RadioButton text="No" id="button1_1590083436758"/>
-					
-					                                                </buttons>
-					
-					                                            
-					
-					                                        </RadioButtonGroup>
-					
-					                                        <Table xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" noDataText="Drop column list items here and columns in the area above" id="table0_copy">
-					
-					                                            <items>
-					
-					                                                <ColumnListItem type="Active" id="item0_1590083015083_copy7">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy7"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy7"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy21"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy22"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy23"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy8">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy8"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy8"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy24"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy25"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy26"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy9">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy9"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy9"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy27"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy28"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy29"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                <ColumnListItem xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" type="Active" id="item0_1590083015083_copy10">
-					
-					                                                    <cells>
-					
-					                                                        <Text text="Row 1 Cell 1" id="text4_copy10"/>
-					
-					                                                        <Text text="Row 1 Cell 2" id="text5_copy10"/>
-					
-					                                                        <Text text="Row 1 Cell 3" id="text6_copy30"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy31"/>
-					
-					                                                        <Text xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Row 1 Cell 3" id="text6_copy32"/>
-					
-					                                                        </cells>
-					
-					                                                    
-					
-					                                                </ColumnListItem>
-					
-					                                                </items>
-					
-					                                            <columns>
-					
-					                                                <Column id="column0_copy">
-					
-					                                                    <header>
-					
-					                                                        <Label text="Nature" id="label1_copy"/>
-					
-					                                                        
-					
-					                                                    </header>
-					
-					                                                    
-					
-					                                                </Column>
-					
-					                                                <Column id="column1_copy">
-					
-					                                                    <header>
-					
-					                                                        <Label text="Number of Members" id="label2_copy"/>
-					
-					                                                        
-					
-					                                                    </header>
-					
-					                                                    
-					
-					                                                </Column>
-					
-					                                                </columns>
-					
-					                                            <swipeContent>
-					
-					                                                <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Occupation" id="label3_copy12"/>
-					
-					                                                
-					
-					                                            </swipeContent>
-					
-					                                            </Table>
-					
-					                                        
-					
-					                                    </sap.ui.layout.form:fields>
 					
 					                                    
 					
@@ -2764,90 +2385,6 @@
 					
 					                                </sap.ui.layout.form:FormElement>
 					
-					                                <sap.ui.layout.form:FormElement label="Recommendation by the supervisor" id="element2_copy19">
-					
-					                                    <sap.ui.layout.form:fields>
-					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590088322350_copy3"/>
-					
-					                                        
-					
-					                                    </sap.ui.layout.form:fields>
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
-					                                <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Social Worker" id="element2_copy20">
-					
-					                                    <sap.ui.layout.form:fields>
-					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590088652142"/>
-					
-					                                        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Regional office" width="100%" id="label1_1590088659967_copy"/>
-					
-					                                        <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" value="Value" id="input0_1590088652142_copy"/>
-					
-					                                        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Date" width="100%" id="label1_1590088659967_copy2"/>
-					
-					                                        <DatePicker xmlns="sap.m" id="picker0_1590088892289"/>
-					
-					                                        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Tel " width="100%" id="label1_1590088659967_copy3"/>
-					
-					                                        <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" value="Value" id="input0_1590088652142_copy3"/>
-					
-					                                        </sap.ui.layout.form:fields>
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
-					                                <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Supervisor" id="element2_copy22">
-					
-					                                    <sap.ui.layout.form:fields>
-					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590088652142_copy6"/>
-					
-					                                        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Date" width="100%" id="label1_1590088659967_copy8"/>
-					
-					                                        <DatePicker xmlns="sap.m" id="picker0_1590088892289_copy2"/>
-					
-					                                        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Tel " width="100%" id="label1_1590088659967_copy9"/>
-					
-					                                        <Input xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" xmlns="sap.m" value="Value" id="input0_1590088652142_copy8"/>
-					
-					                                        </sap.ui.layout.form:fields>
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
-					                                <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Manager" id="element2_copy21">
-					
-					                                    <sap.ui.layout.form:fields>
-					
-					                                        <Label xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" text="Date" width="100%" id="label1_1590088659967_copy5"/>
-					
-					                                        <DatePicker xmlns="sap.m" id="picker0_1590088892289_copy"/>
-					
-					                                        </sap.ui.layout.form:fields>
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
-					                                <sap.ui.layout.form:FormElement xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:sap.ui.layout.form="sap.ui.layout.form" label="Date of next review" id="element2_copy23">
-					
-					                                    <sap.ui.layout.form:fields>
-					
-					                                        <DatePicker xmlns="sap.m" id="picker0_1590089020165"/>
-					
-					                                        </sap.ui.layout.form:fields>
-					
-					                                    
-					
-					                                </sap.ui.layout.form:FormElement>
-					
 					                                </sap.ui.layout.form:formElements>
 					
 					                            
@@ -2910,4 +2447,6 @@
 		
 			</Page>
 		
+		
+	
 </mvc:View>

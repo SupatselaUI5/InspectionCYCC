@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Opa5) {
 	"use strict";
 
-	return Opa5.extend("gdsd.ApplicationForFunding1.test.integration.arrangements.Startup", {
+	return Opa5.extend("gdsd.Inspect.test.integration.arrangements.Startup", {
 
 		iStartMyApp: function (oOptionsParameter) {
 			var oOptions = oOptionsParameter || {};
@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "gdsd.ApplicationForFunding1",
+					name: "gdsd.Inspect",
 					async: true
 				},
 				hash: oOptions.hash,
