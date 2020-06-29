@@ -1,25 +1,18 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="gdsd.Inspect.controller.TaskList" displayBlock="true">
 
 	
-			<Page backgroundDesign="Solid" id="TaskList">
+			<Page backgroundDesign="Solid">
 				<content>
-					<ObjectHeader xmlns="sap.m" intro="Social Worker: {But000/NameFirst} {But000/NameLast}" icon="pictures/gauteng.png" id="objHeaderSW" title="Inspection"/>
-					<List id="taskList">
+					<ObjectHeader xmlns="sap.m" intro="Social Worker: {But000/NameFirst} {But000/NameLast}" icon="pictures/gauteng.png" id="objHeaderSW" title="INSPECTION CYCC"/>
+					<List id="taskList" items="{path: '/results'}">
 						<items>
-							<ObjectListItem  type="Navigation" title="{BpNo}" number="OrgName" press="action"  id="ItemCYCC" detailPress="action">
+							<ObjectListItem type="Navigation" title="{BpNo}" number="{But000/NameFirst} {But000/NameLast}" press="onTaskPress">
 								<attributes>
-									<ObjectAttribute text="Description"/>
+									<ObjectAttribute text="{Description}"/>
+									<ObjectAttribute text="{ObjectId}" title="Inspection ID"/>
 								</attributes>
 								<firstStatus>
-									<ObjectStatus text="CYCC Inspection"/>
-								</firstStatus>
-							</ObjectListItem>
-							<ObjectListItem xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" type="Navigation" title="BP Number" number="OrgName" press="action" action:wiring="\{'press':\{'navigation':\{'routeName':'SFABInspection'\}\},'detailPress':\{'navigation':\{'routeName':'SFABInspection'\}\}\}" id="itemShelterAbused" detailPress="action">
-								<attributes>
-									<ObjectAttribute text="Description"/>
-								</attributes>
-								<firstStatus>
-									<ObjectStatus text="Shelter for Abused women"/>
+									<ObjectStatus text="{DescriptionP}"/>
 								</firstStatus>
 							</ObjectListItem>
 						</items>

@@ -3,14 +3,14 @@
 		
 		<Page xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" id="planA" title="Inspection report for the registration/renewal of registration of a child and youth care centre " showNavButton="true" navButtonPress="action" action:wiring="\{'navButtonPress':\{'navigation':\{'routeName':'TaskList'\}\}\}">
 				<content>
-					<ObjectHeader xmlns="sap.m" title="Inspection Report for CYCC   - {But000/NameOrg1}" id="header0" icon="pictures/icon.jpg">
+					<ObjectHeader xmlns="sap.m" title="INSPECTION REPORT FOR CYCC " id="header0" icon="pictures/gauteng.png">
 					    <statuses>
 					  </statuses>
 					    <attributes>
-					  <ObjectAttribute text="BP Number : {But000/Partner}" id="attribute0"/>
+					  <ObjectAttribute text="Social Worker : {But000/NameFirst} {But000/NameLast}" id="attribute0"/>
 					                    </attributes>
 					                    <attributes>
-					  <ObjectAttribute text="Date of Inspection: " id="attribute1"/>
+					  <ObjectAttribute text="Description of Inspection: {DescriptionP}" id="attribute1"/>
 					                    </attributes>
 					                    <attributes>
 					  <ObjectAttribute text="Date of Previous Inspection: " id="attribute2"/>
@@ -179,7 +179,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input width="100%" id="input0_copy23" editable="false" value="123" type="Number"/>
+					                                        <Input width="100%" id="input0_copy23" editable="false" type="Number"/>
 					
 					                                        
 					
@@ -263,7 +263,7 @@
 					
 					                                        </RadioButtonGroup>
 															<Label text="Comments:"/>
-															<TextArea xmlns="sap.m" value="Test Text" rows="4" id="area1" editable="false"/>
+															<TextArea xmlns="sap.m" rows="4" id="Zv01" placeholder="Input comments for constitution and rules.."/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -275,7 +275,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" value="Test Text" rows="4" id="area0" editable="false"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv02" placeholder="Input comments for competency of management ..."/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -301,7 +301,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <DatePicker xmlns="sap.m" id="picker0"/>
+					                                        <DatePicker xmlns="sap.m" id="picker0" editable="false"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -791,7 +791,7 @@
 					
 					                                        <Label text="If not, state reason:" width="100%" id="label1_1590084444093"/>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590084533287" placeholder="Input Reason here"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv03" placeholder="Enter submission state reason"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -819,7 +819,7 @@
 					
 					                                        <Label text="If not, state reason:" width="100%" id="label1_1590084444093_copy2"/>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590084533287_copy2" placeholder="Input Reason here"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590084533287_copy2" editable="false"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -847,7 +847,7 @@
 					
 					                                        <Label text="If not, state reason:" width="100%" id="label1_1590084444093_copy"/>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590084533287_copy" placeholder="Input Reason here"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv04" placeholder="Input audit reason..."/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -859,7 +859,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590084533287_copy3" placeholder="Input Reason here"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv05" placeholder="Input personal Impression..."/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -931,7 +931,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400" editable="false"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -943,7 +943,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy" editable="false"/>
 					
 					                                        
 					
@@ -957,7 +957,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy2"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy2" editable="false"/>
 					
 					                                        
 					
@@ -975,7 +975,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy3"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy3" editable="false"/>
 					
 					                                        
 					
@@ -989,7 +989,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy4"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy4" editable="false"/>
 					
 					                                        
 					
@@ -1007,7 +1007,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy5"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy5" editable="false"/>
 					
 					                                        
 					
@@ -1021,7 +1021,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy6"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy6" editable="false"/>
 					
 					                                        
 					
@@ -1035,7 +1035,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy7"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy7" editable="false"/>
 					
 					                                        
 					
@@ -1049,7 +1049,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy8"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy8" editable="false"/>
 					
 					                                        
 					
@@ -1063,7 +1063,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy9"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy9" editable="false"/>
 					
 					                                        
 					
@@ -1077,7 +1077,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590085335400_copy10"/>
+					                                        <Input xmlns="sap.m" id="input0_1590085335400_copy10" editable="false"/>
 					
 					                                        
 					
@@ -1091,7 +1091,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" value="Text Area" rows="4" id="area1_1590085798126"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="area1_1590085798126" enabled="false"/>
 					
 					                                        
 					
@@ -1161,7 +1161,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" value="Text Area" rows="4" id="area0_1590085983201"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv06" placeholder="Enter program details..."/>
 					
 					                                        
 					
@@ -1175,7 +1175,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590086013733"/>
+					                                        <Input xmlns="sap.m" id="input0_1590086013733" editable="false"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -1187,7 +1187,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590086013733_copy"/>
+					                                        <Input xmlns="sap.m" id="input0_1590086013733_copy" editable="false"/>
 					
 					                                        
 					
@@ -1201,7 +1201,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590086013733_copy2"/>
+					                                        <Input xmlns="sap.m" id="input0_1590086013733_copy2" editable="false"/>
 					
 					                                        
 					
@@ -1215,7 +1215,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590086013733_copy3"/>
+					                                        <Input xmlns="sap.m" id="input0_1590086013733_copy3" editable="false"/>
 					
 					                                        
 					
@@ -1349,7 +1349,7 @@
 					
 					                                        <Label text="Nature" width="100%" id="label1_1590086313458"/>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590086303013"/>
+					                                        <Input xmlns="sap.m" id="input0_1590086303013" editable="false"/>
 					
 					                                        
 					
@@ -1624,7 +1624,7 @@
 					
 					                        <sap.ui.layout.form:fields>
 					
-					                            <TextArea xmlns="sap.m" rows="4" id="area3"/>
+					                            <TextArea xmlns="sap.m" rows="4" id="Zv07" placeholder="Input location detail..."/>
 					
 					                        </sap.ui.layout.form:fields>
 					
@@ -1634,7 +1634,7 @@
 					
 					                        <sap.ui.layout.form:fields>
 					
-					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy3"/>
+					                            <TextArea xmlns="sap.m" rows="4" id="Zv08" placeholder="Input recreation details..."/>
 					
 					                            
 					
@@ -1648,7 +1648,7 @@
 					
 					                        <sap.ui.layout.form:fields>
 					
-					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy4"/>
+					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy4" editable="false"/>
 					
 					                            
 					
@@ -1662,7 +1662,7 @@
 					
 					                        <sap.ui.layout.form:fields>
 					
-					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy5"/>
+					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy5" editable="false"/>
 					
 					                            
 					
@@ -1676,7 +1676,7 @@
 					
 					                        <sap.ui.layout.form:fields>
 					
-					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy8"/>
+					                            <TextArea xmlns="sap.m" rows="4" id="Zv09" placeholder="Input diet comments"/>
 					
 					                            
 					
@@ -1690,7 +1690,7 @@
 					
 					                        <sap.ui.layout.form:fields>
 					
-					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy7"/>
+					                            <TextArea xmlns="sap.m" rows="4" id="Zv10" placeholder="Input general Appearance comments"/>
 					
 					                            
 					
@@ -1704,7 +1704,7 @@
 					
 					                        <sap.ui.layout.form:fields>
 					
-					                            <TextArea xmlns="sap.m" rows="4" id="area3_copy6"/>
+					                            <TextArea xmlns="sap.m" rows="4" id="Zv11" placeholder="Input discipline comments"/>
 					
 					                            
 					
@@ -1963,7 +1963,7 @@
 					
 					                                        </RadioButtonGroup>
 					
-					                                        <TextArea xmlns="sap.m" value="Specify" rows="4" id="area0_1590087764027"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv12" placeholder="Input problem occurrence "/>
 					
 					                                        
 					
@@ -1977,7 +1977,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590087818859" placeholder="Furnish Particulars"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv13" placeholder="Input method of treatment "/>
 					
 					                                        
 					
@@ -1991,7 +1991,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area1_1590087865827" placeholder="Comments"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv14" placeholder="Input efficiency opinion"/>
 					
 					                                        
 					
@@ -2005,7 +2005,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <Input xmlns="sap.m" value="Value" id="input0_1590087917451"/>
+					                                        <Input xmlns="sap.m" id="input0_1590087917451" editable="false"/>
 					
 					                                        
 					
@@ -2071,7 +2071,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area3_copy2"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv15" placeholder="Input community engagement"/>
 					
 					                                        
 					
@@ -2085,7 +2085,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area3_copy14"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv16" placeholder="Input communication "/>
 					
 					                                        
 					
@@ -2099,7 +2099,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area3_copy13"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv25"/>
 					
 					                                        
 					
@@ -2113,7 +2113,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area3_copy12"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv17" placeholder="Input freedom"/>
 					
 					                                        
 					
@@ -2127,7 +2127,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area3_copy11"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv18" placeholder="Input children placement policy"/>
 					
 					                                        
 					
@@ -2141,7 +2141,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area3_copy10"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv19" placeholder="Input absconder report "/>
 					
 					                                        
 					
@@ -2155,7 +2155,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area3_copy9"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv20" placeholder="Input notice of movement"/>
 					
 					                                        
 					
@@ -2225,7 +2225,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590088251332"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv21" placeholder="Input children engagement comments"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -2293,7 +2293,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590088322350_copy"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv22" placeholder="Input reunification "/>
 					
 					                                        
 					
@@ -2307,7 +2307,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590088322350"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv23" placeholder="Input other aspects"/>
 					
 					                                        </sap.ui.layout.form:fields>
 					
@@ -2375,7 +2375,7 @@
 					
 					                                    <sap.ui.layout.form:fields>
 					
-					                                        <TextArea xmlns="sap.m" rows="4" id="area0_1590088322350_copy2"/>
+					                                        <TextArea xmlns="sap.m" rows="4" id="Zv24" placeholder="Input recommendations "/>
 					
 					                                        
 					
@@ -2411,7 +2411,7 @@
 					
 					                        <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Previous" id="button0_copy18" icon="sap-icon://nav-back" press="onToProvince"/>
 					
-					                        <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Save" id="button0_copy19" icon="sap-icon://save"/>
+					                        <Button xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml" xmlns="sap.m" xmlns:action="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" text="Save" id="save" press="onUpdateInspectionCYCC" icon="sap-icon://save"/>
 					
 					                        </items>
 					

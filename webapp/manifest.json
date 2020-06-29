@@ -18,7 +18,7 @@
 				"uri": "/sap/opu/odata/sap/ZDSD_CRM_UI5_APP_SRV/",
 				"type": "OData",
 				"settings": {
-					"localUri": "localService/ZDSD_CRM_UI5_APP_SRV/metadata.xml"
+					"localUri": "localService/metadata.xml"
 				}
 			}
 		}
@@ -70,19 +70,18 @@
 				"type": "sap.ui.model.odata.v2.ODataModel",
 				"settings": {
 					"defaultOperationMode": "Server",
-					"defaultBindingMode": "OneWay",
-					"defaultCountMode": "Request"
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "None",
+					"useBatch": false
 				},
 				"dataSource": "ZDSD_CRM_UI5_APP_SRV",
 				"preload": true
 			}
 		},
 		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+			"css": [{
+				"uri": "css/style.css"
+			}]
 		},
 		"routing": {
 			"config": {
@@ -94,31 +93,21 @@
 				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [
-				{
-					"name": "TaskList",
-					"pattern": "",
-					"titleTarget": "",
-					"greedy": false,
-					"target": [
-						"TaskList"
-					]
-				},
-				{
-					"name": "CYCCInspection",
-					"pattern": "CYCCInspection",
-					"target": [
-						"CYCCInspection"
-					]
-				},
-				{
-					"name": "SFABInspection",
-					"pattern": "SFABInspection",
-					"target": [
-						"SFABInspection"
-					]
-				}
-			],
+			"routes": [{
+				"name": "TaskList",
+				"pattern": "",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["TaskList"]
+			}, {
+				"name": "CYCCInspection",
+				"pattern": "CYCCInspection/{taskPath},{BPNo}",
+				"target": ["CYCCInspection"]
+			}, {
+				"name": "SFABInspection",
+				"pattern": "SFABInspection",
+				"target": ["SFABInspection"]
+			}],
 			"targets": {
 				"TargetTaskList": {
 					"viewType": "XML",
