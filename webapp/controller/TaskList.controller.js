@@ -26,12 +26,12 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				//User details retrieved successfully
 				success: (function (oData) {
 					var BPJsonModel = new sap.ui.model.json.JSONModel({
-					//	data: oData.results[0] - NISH
+						data: oData.results[0]
 					});
 					
 						this.byId("objHeaderSW").setModel(this._oODataModel);
 					this.byId("objHeaderSW").bindElement({
-						path: "/GET_BPSet('1000000025')" // use OData parameters here if needed
+						path: "/data" // use OData parameters here if needed
 					});
 					
 				//	this.byId("objHeaderSW").setModel(BPJsonModel);
@@ -40,7 +40,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 							// use OData parameters here if needed
 				//	});
 					//this.SWBP = oData.results[0].But000.Partner; - NISH
-					this.SWBP = '1000000025';
+					this.SWBP = oData.results[0].But000.Partner;
 					var filterVal = "BpNo eq '" + this.SWBP + "'";
 					this.getTaskData(filterVal);
 				}).bind(this),
