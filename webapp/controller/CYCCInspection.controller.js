@@ -45,13 +45,14 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				
 			});
 				*/
-				var TaskJsonModel = sap.ui.getCore().getModel("TaskJsonModel");
+			var TaskJsonModel = sap.ui.getCore().getModel("TaskJsonModel");
 			this.getView().setModel(TaskJsonModel);
-		this.oModelProperty = TaskJsonModel.getProperty("/" + window.decodeURIComponent(oEvent.getParameter("arguments").taskPath));
+			this.oModelProperty = TaskJsonModel.getProperty("/" + window.decodeURIComponent(oEvent.getParameter("arguments").taskPath));
 			this.getView().bindElement({
-				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").taskPath)
+			path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").taskPath)
 			});
 			this.SWBP = oEvent.getParameter("arguments").BPNo;
+			this.onBindSWBP();
 			this.onResetFields();
 		
 		},
@@ -66,13 +67,13 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					var BPJsonModel = new sap.ui.model.json.JSONModel({
 						data: oData.results[0]
 					});
-				//	this.byId("header0").setModel(BPJsonModel);
-			//		this.byId("header0").bindElement({
-				//		path: "/data"
+				this.byId("form0").setModel(BPJsonModel);
+					this.byId("form0").bindElement({
+						path: "/data"
 							// use OData parameters here if needed
-				//	});
-					//this.SWBP = oData.results[0].But000.Partner; - NISH
-					this.SWBP = '1000000025';
+					});
+					this.SWBP = oData.results[0].But000.Partner;
+				
 					var filterVal = "BpNo eq '" + this.SWBP + "'";
 					this.getTaskData(filterVal);
 				}).bind(this),

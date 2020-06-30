@@ -10,7 +10,7 @@
 					  <ObjectAttribute text="Social Worker : {But000/NameFirst} {But000/NameLast}" id="attribute0"/>
 					                    </attributes>
 					                    <attributes>
-					  <ObjectAttribute text="Description of Inspection: {DescriptionP}" id="attribute1"/>
+					  <ObjectAttribute text="Description of Inspection: {Description}" id="attribute1"/>
 					                    </attributes>
 					                    <attributes>
 					  <ObjectAttribute text="Date of Previous Inspection: " id="attribute2"/>
