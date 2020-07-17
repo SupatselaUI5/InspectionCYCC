@@ -1,12 +1,14 @@
-sap.ui.define(["sap/ui/core/mvc/Controller",
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
 	"sap/ui/model/Filter",
 	"sap/ui/model/json/JSONModel",
 	'sap/ui/Device'
 ], function (Controller, Filter, JSONModel, Device) {
 	"use strict";
+	
 	return Controller.extend("gdsd.Inspect.controller.TaskList", {
 		onInit: function () {
-				this._oODataModel = this.getOwnerComponent().getModel();
+			this._oODataModel = this.getOwnerComponent().getModel();
 			this._oODataModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
 			this.Router = sap.ui.core.UIComponent.getRouterFor(this);
 			this.Router.getRoute("TaskList").attachPatternMatched(this._onObjectMatched, this);
@@ -14,32 +16,29 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		},
 		
 		_onObjectMatched: function () {
-		
 			this.onBindSWBP();
 		},
 		
-		
 			onBindSWBP: function () {
 			sap.ui.core.BusyIndicator.show();
-			// var filterVal = "BpNo eq '0000000114'";
+			// var filterVal = "BpNo eq '1000000025'";
 			this._oODataModel.read("/GET_BPSet", {
 				//User details retrieved successfully
 				success: (function (oData) {
 					var BPJsonModel = new sap.ui.model.json.JSONModel({
 						data: oData.results[0]
 					});
-					
-						this.byId("objHeaderSW").setModel(this._oODataModel);
+					this.byId("objHeaderSW").setModel(BPJsonModel);
 					this.byId("objHeaderSW").bindElement({
 						path: "/data" // use OData parameters here if needed
 					});
 					
-				//	this.byId("objHeaderSW").setModel(BPJsonModel);
-				//	this.byId("objHeaderSW").bindElement({
-				//		path: "/data"
-							// use OData parameters here if needed
-				//	});
-					//this.SWBP = oData.results[0].But000.Partner; - NISH
+										this.byId("taskList").setModel(BPJsonModel);
+					this.byId("taskList").bindElement({
+						path: "/data" // use OData parameters here if needed
+					});
+
+					
 					this.SWBP = oData.results[0].But000.Partner;
 					var filterVal = "BpNo eq '" + this.SWBP + "'";
 					this.getTaskData(filterVal);
@@ -174,7 +173,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 		},
 
 		handleFilterButtonPressed: function () {
-			this.createViewSettingsDialog("gdsd.ProcessNote.Fragments.FilterDialog").open();
+			this.createViewSettingsDialog("gdsd.Inspect.Fragments.FilterDialog").open();
 		},
 
 		onExit: function () {

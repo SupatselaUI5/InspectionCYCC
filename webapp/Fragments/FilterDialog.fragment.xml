@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<ViewSettingsDialog confirm="handleFilterDialogConfirm">
+		<filterItems>
+			<!--<ViewSettingsFilterItem items="{path: '/results'}" text="BP Number" key="BpNo" multiSelect="false">-->
+			<!--	<items>-->
+			<!--		<ViewSettingsItem text="{BpNo}" key="BpNo___EQ___{BpNo}"/>-->
+			<!--	</items>-->
+			<!--</ViewSettingsFilterItem>-->
+			<ViewSettingsFilterItem items="{path: '/'}" text="Task Type" key="ProcessType" multiSelect="false">
+				<items>
+					<ViewSettingsItem text="{DescriptionP}" key="DescriptionP___EQ___{DescriptionP}"/>
+				</items>
+			</ViewSettingsFilterItem>
+			<!--<ViewSettingsFilterItem items="{path: '/results'}" text="First Name" key="FirstName" multiSelect="false">-->
+			<!--	<items>-->
+			<!--		<ViewSettingsItem text="{But000/NameFirst}" key="NameFirst___EQ___{But000/NameFirst}"/>-->
+			<!--	</items>-->
+			<!--</ViewSettingsFilterItem>-->
+			<!--<ViewSettingsFilterItem items="{path: '/results'}" text="Last Name" key="LastName" multiSelect="false">-->
+			<!--	<items>-->
+			<!--		<ViewSettingsItem text="{But000/NameLast}" key="But000/NameFirst___contains___{But000/NameLast}"/>-->
+			<!--	</items>-->
+			<!--</ViewSettingsFilterItem>-->
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

@@ -14,6 +14,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			this.oRouter.getRoute("CYCCInspection").attachPatternMatched(this._onObjectMatched, this);
 			this._oODataModel = this.getOwnerComponent().getModel();
 			this._oODataModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
+			
 		},
 		
 		_onObjectMatched: function (oEvent) {
@@ -45,6 +46,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				
 			});
 				*/
+			var oForm = this.getView().byId("form0_0");
 			var TaskJsonModel = sap.ui.getCore().getModel("TaskJsonModel");
 			this.getView().setModel(TaskJsonModel);
 			this.oModelProperty = TaskJsonModel.getProperty("/" + window.decodeURIComponent(oEvent.getParameter("arguments").taskPath));
@@ -52,6 +54,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").taskPath)
 			});
 			this.SWBP = oEvent.getParameter("arguments").BPNo;
+			
+			this.getView().byId("Zv01").setValue(TaskJsonModel.oData.Zv01);
+			
 			this.onBindSWBP();
 			this.onResetFields();
 		
@@ -83,17 +88,23 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			});
 		},
 		
-		
 			getTaskData: function (filter) {
-			var oList = this.byId("form0");
+			var oSF = this.byId("form0_0");
 			this._oODataModel.read("/GetCyccInspectionSet", { // sPath - path of your Entityset
 				urlParameters: {
 					"$filter": filter
 				},
 				success: function (data, response) {
 					var TaskJsonModel = new sap.ui.model.json.JSONModel(data);
-			//		oList.setModel(TaskJsonModel);
+					oSF.setModel(TaskJsonModel);
 					sap.ui.getCore().setModel(TaskJsonModel, "TaskJsonModel");
+				//	this.byId("form0_0").setModel(TaskJsonModel);
+					
+				//	this.byId("form0_0").bindElement({
+							// use OData parameters here if needed
+				//	});
+				
+				    
 					sap.ui.core.BusyIndicator.hide();
 					//your code for manipulation of the data received 
 				}.bind(this), // if you want to use the current controller instance within this function
@@ -116,7 +127,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			}
 		},
 		
-		onUpdateInspectionCYCC: function () {
+		onUpdateInspectionCYCC: function (oData) {
 			//var path = "/GetProcessNoteSet('" + this.SWBP + "')";
 			this.getView().setBusy(true);
 			var oEntry = {};
@@ -149,6 +160,11 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 			oEntry.Zv22 = this.byId("Zv22").getValue();
 			oEntry.Zv23 = this.byId("Zv23").getValue();
 			oEntry.Zv24 = this.byId("Zv24").getValue();
+		
+			
+			
+		
+			
 		//	var sPath = "/GetCyccInspectionSet(Guid='" + this.oModelProperty.Guid + "',BpNo='" + this.SWBP + "',ObjectId='" + this.oModelProperty.ObjectId +
 		//		"')"; 25-06-2020 Nish
 				
@@ -167,6 +183,68 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 				}.bind(this)
 			});
 		},
+		
+		
+			onDraftInspectionCYCC: function () {
+			//var path = "/GetProcessNoteSet('" + this.SWBP + "')";
+			this.getView().setBusy(true);
+			var oEntry = {};
+			oEntry.BpNo = '1000000025';//this.SWBP;
+			oEntry.Guid = '00505695B7F81EDA9BD6512B50F3312C';// 25-06-2020 Nish this.oModelProperty.Guid;
+			oEntry.ObjectId = '216';//this.oModelProperty.ObjectId;
+			//oEntry.Statu.Status = 'E0010';
+		//	this.oModelProperty.Status = 'E0010';
+		//	var oModel = this.getView().getModel();
+		//	oModel.setProperty("/Statu/1", "E0010");
+			
+			//Fields - Text Areas
+			oEntry.Zv01 = this.byId("Zv01").getValue();
+			oEntry.Zv02 = this.byId("Zv02").getValue();
+			oEntry.Zv03 = this.byId("Zv03").getValue();
+			oEntry.Zv25 = this.byId("Zv25").getValue();
+			oEntry.Zv04 = this.byId("Zv04").getValue();
+			oEntry.Zv05 = this.byId("Zv05").getValue();
+			oEntry.Zv06 = this.byId("Zv06").getValue();
+			oEntry.Zv07 = this.byId("Zv07").getValue();
+			oEntry.Zv08 = this.byId("Zv08").getValue();
+			oEntry.Zv09 = this.byId("Zv09").getValue();
+			oEntry.Zv10 = this.byId("Zv10").getValue();
+			oEntry.Zv11 = this.byId("Zv11").getValue();
+			oEntry.Zv12 = this.byId("Zv12").getValue();
+			oEntry.Zv13 = this.byId("Zv13").getValue();
+			oEntry.Zv14 = this.byId("Zv14").getValue();
+			oEntry.Zv15 = this.byId("Zv15").getValue();
+			oEntry.Zv16 = this.byId("Zv16").getValue();
+			oEntry.Zv17 = this.byId("Zv17").getValue();
+			oEntry.Zv18 = this.byId("Zv18").getValue();
+			oEntry.Zv19 = this.byId("Zv19").getValue();
+			oEntry.Zv20 = this.byId("Zv20").getValue();
+			oEntry.Zv21 = this.byId("Zv21").getValue();
+			oEntry.Zv22 = this.byId("Zv22").getValue();
+			oEntry.Zv23 = this.byId("Zv23").getValue();
+			oEntry.Zv24 = this.byId("Zv24").getValue();
+			
+			
+			
+		//	var sPath = "/GetCyccInspectionSet(Guid='" + this.oModelProperty.Guid + "',BpNo='" + this.SWBP + "',ObjectId='" + this.oModelProperty.ObjectId +
+		//		"')"; 25-06-2020 Nish
+				
+					var sPath = "/GetCyccInspectionSet(Guid='" + '00505695B7F81EDA9BD6512B50F3312C' + "',BpNo='"+ '1000000025' +"',ObjectId='"+ '216' +"')";
+
+			this._oODataModel.update(sPath, oEntry, {
+				success: function (oData) {
+					this.getView().setBusy(false);
+					this.handleSuccessMessageBoxPress();
+
+				}.bind(this),
+				error: function (results) {
+					this.getView().setBusy(false);
+					this.handleErrorMessageBoxPress();
+
+				}.bind(this)
+			});
+		},
+		
 		
 			_getSimpleFormFields: function (oSimpleForm) {
 			var aControls = [];
